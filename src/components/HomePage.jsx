@@ -12,6 +12,7 @@ const HomePage = props => {
 
     const { data, isFetching} = useGetCryptosQuery(10);
     const globalStats = data?.data?.stats;
+    const coins = data?.data?.coins;
 
 
     if (isFetching) return '...Loading';
@@ -48,7 +49,7 @@ const HomePage = props => {
                 <Title level={2} className="home-title">Later Crypto News</Title>
                 <Title level={3} className="show-more"><Link to="/news"> Show More</Link></Title>
             </div>
-            <News  simplified={true}/>
+            <News coins={coins} simplified={true}/>
         </>
     );
 };
