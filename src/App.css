@@ -340,7 +340,7 @@ a:hover {
     font-weight: 900 !important;
 }
 
-.home-heading-container {
+.home-header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
